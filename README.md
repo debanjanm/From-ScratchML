@@ -6,13 +6,13 @@ Popular ML algorithms implemented in raw Python + numpy — no scikit-learn/torc
 
 | Algorithm | Type | Path |
 |---|---|---|
-| Linear Regression | Supervised, regression | [`algorithms/linear_regression`](algorithms/linear_regression) |
-| Logistic Regression | Supervised, classification | [`algorithms/logistic_regression`](algorithms/logistic_regression) |
-| K-Nearest Neighbors | Supervised, classification | [`algorithms/knn`](algorithms/knn) |
-| Decision Tree | Supervised, classification | [`algorithms/decision_tree`](algorithms/decision_tree) |
-| Naive Bayes | Supervised, classification | [`algorithms/naive_bayes`](algorithms/naive_bayes) |
-| K-Means | Unsupervised, clustering | [`algorithms/kmeans`](algorithms/kmeans) |
-| PCA | Unsupervised, dimensionality reduction | [`algorithms/pca`](algorithms/pca) |
+| Linear Regression | Supervised, regression | [`algorithms/01_linear_regression`](algorithms/01_linear_regression) |
+| Logistic Regression | Supervised, classification | [`algorithms/02_logistic_regression`](algorithms/02_logistic_regression) |
+| K-Nearest Neighbors | Supervised, classification | [`algorithms/03_knn`](algorithms/03_knn) |
+| Decision Tree | Supervised, classification | [`algorithms/04_decision_tree`](algorithms/04_decision_tree) |
+| Naive Bayes | Supervised, classification | [`algorithms/05_naive_bayes`](algorithms/05_naive_bayes) |
+| K-Means | Unsupervised, clustering | [`algorithms/06_kmeans`](algorithms/06_kmeans) |
+| PCA | Unsupervised, dimensionality reduction | [`algorithms/07_pca`](algorithms/07_pca) |
 
 ## Setup
 
@@ -35,6 +35,6 @@ algorithms/<name>/
 Run any algorithm's test or demo directly:
 
 ```bash
-python algorithms/linear_regression/test_model.py
-python algorithms/linear_regression/demo.py
+python algorithms/01_linear_regression/test_model.py
+python algorithms/01_linear_regression/demo.py
 ```
