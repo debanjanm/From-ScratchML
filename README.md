@@ -16,6 +16,7 @@ Popular ML algorithms implemented in raw Python + numpy — no scikit-learn/torc
 | Random Forest | Supervised, classification (ensemble) | [`algorithms/08_random_forest`](algorithms/08_random_forest) |
 | Gradient Boosting | Supervised, regression (ensemble) | [`algorithms/09_gradient_boosting`](algorithms/09_gradient_boosting) |
 | Support Vector Machine | Supervised, classification (linear) | [`algorithms/10_svm`](algorithms/10_svm) |
+| Neural Network (MLP) | Supervised, classification (deep learning) | [`algorithms/11_neural_network`](algorithms/11_neural_network) |
 
 ## Setup
 
