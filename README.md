@@ -13,6 +13,9 @@ Popular ML algorithms implemented in raw Python + numpy — no scikit-learn/torc
 | Naive Bayes | Supervised, classification | [`algorithms/05_naive_bayes`](algorithms/05_naive_bayes) |
 | K-Means | Unsupervised, clustering | [`algorithms/06_kmeans`](algorithms/06_kmeans) |
 | PCA | Unsupervised, dimensionality reduction | [`algorithms/07_pca`](algorithms/07_pca) |
+| Random Forest | Supervised, classification (ensemble) | [`algorithms/08_random_forest`](algorithms/08_random_forest) |
+| Gradient Boosting | Supervised, regression (ensemble) | [`algorithms/09_gradient_boosting`](algorithms/09_gradient_boosting) |
+| Support Vector Machine | Supervised, classification (linear) | [`algorithms/10_svm`](algorithms/10_svm) |
 
 ## Setup
 
