@@ -7,16 +7,19 @@ Popular ML algorithms implemented in raw Python + numpy — no scikit-learn/torc
 | Algorithm | Type | Path |
 |---|---|---|
 | Linear Regression | Supervised, regression | [`algorithms/01_linear_regression`](algorithms/01_linear_regression) |
-| Logistic Regression | Supervised, classification | [`algorithms/02_logistic_regression`](algorithms/02_logistic_regression) |
-| K-Nearest Neighbors | Supervised, classification | [`algorithms/03_knn`](algorithms/03_knn) |
-| Decision Tree | Supervised, classification | [`algorithms/04_decision_tree`](algorithms/04_decision_tree) |
+| Ridge & Lasso | Supervised, regularized regression | [`algorithms/02_ridge_lasso`](algorithms/02_ridge_lasso) |
+| Logistic Regression | Supervised, classification | [`algorithms/03_logistic_regression`](algorithms/03_logistic_regression) |
+| K-Nearest Neighbors | Supervised, classification | [`algorithms/04_knn`](algorithms/04_knn) |
 | Naive Bayes | Supervised, classification | [`algorithms/05_naive_bayes`](algorithms/05_naive_bayes) |
-| K-Means | Unsupervised, clustering | [`algorithms/06_kmeans`](algorithms/06_kmeans) |
-| PCA | Unsupervised, dimensionality reduction | [`algorithms/07_pca`](algorithms/07_pca) |
+| Decision Tree | Supervised, classification | [`algorithms/06_decision_tree`](algorithms/06_decision_tree) |
+| Support Vector Machine | Supervised, classification (linear) | [`algorithms/07_svm`](algorithms/07_svm) |
 | Random Forest | Supervised, classification (ensemble) | [`algorithms/08_random_forest`](algorithms/08_random_forest) |
 | Gradient Boosting | Supervised, regression (ensemble) | [`algorithms/09_gradient_boosting`](algorithms/09_gradient_boosting) |
-| Support Vector Machine | Supervised, classification (linear) | [`algorithms/10_svm`](algorithms/10_svm) |
+| AdaBoost | Supervised, classification (ensemble) | [`algorithms/10_adaboost`](algorithms/10_adaboost) |
 | Neural Network (MLP) | Supervised, classification (deep learning) | [`algorithms/11_neural_network`](algorithms/11_neural_network) |
+| K-Means | Unsupervised, clustering | [`algorithms/12_kmeans`](algorithms/12_kmeans) |
+| DBSCAN | Unsupervised, density clustering | [`algorithms/13_dbscan`](algorithms/13_dbscan) |
+| PCA | Unsupervised, dimensionality reduction | [`algorithms/14_pca`](algorithms/14_pca) |
 
 ## Setup
 
