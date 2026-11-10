@@ -12,18 +12,24 @@ Popular ML algorithms implemented in raw Python + numpy — no scikit-learn/torc
 | Polynomial Regression | Supervised, regression | [`algorithms/04_polynomial_regression`](algorithms/04_polynomial_regression) |
 | Support Vector Regression | Supervised, regression (linear) | [`algorithms/05_support_vector_regression`](algorithms/05_support_vector_regression) |
 | Gaussian Process Regression | Supervised, regression (probabilistic) | [`algorithms/06_gaussian_process_regression`](algorithms/06_gaussian_process_regression) |
-| Logistic Regression | Supervised, classification | [`algorithms/07_logistic_regression`](algorithms/07_logistic_regression) |
-| K-Nearest Neighbors | Supervised, classification | [`algorithms/08_knn`](algorithms/08_knn) |
-| Naive Bayes | Supervised, classification | [`algorithms/09_naive_bayes`](algorithms/09_naive_bayes) |
-| Decision Tree | Supervised, classification | [`algorithms/10_decision_tree`](algorithms/10_decision_tree) |
-| Support Vector Machine | Supervised, classification (linear) | [`algorithms/11_svm`](algorithms/11_svm) |
-| Random Forest | Supervised, classification (ensemble) | [`algorithms/12_random_forest`](algorithms/12_random_forest) |
-| Gradient Boosting | Supervised, regression (ensemble) | [`algorithms/13_gradient_boosting`](algorithms/13_gradient_boosting) |
-| AdaBoost | Supervised, classification (ensemble) | [`algorithms/14_adaboost`](algorithms/14_adaboost) |
-| Neural Network (MLP) | Supervised, classification (deep learning) | [`algorithms/15_neural_network`](algorithms/15_neural_network) |
-| K-Means | Unsupervised, clustering | [`algorithms/16_kmeans`](algorithms/16_kmeans) |
-| DBSCAN | Unsupervised, density clustering | [`algorithms/17_dbscan`](algorithms/17_dbscan) |
-| PCA | Unsupervised, dimensionality reduction | [`algorithms/18_pca`](algorithms/18_pca) |
+| Decision Tree Regressor | Supervised, regression (tree) | [`algorithms/07_decision_tree_regressor`](algorithms/07_decision_tree_regressor) |
+| Perceptron | Supervised, classification (linear) | [`algorithms/08_perceptron`](algorithms/08_perceptron) |
+| Logistic Regression | Supervised, classification | [`algorithms/09_logistic_regression`](algorithms/09_logistic_regression) |
+| Softmax Regression | Supervised, multiclass classification | [`algorithms/10_softmax_regression`](algorithms/10_softmax_regression) |
+| K-Nearest Neighbors | Supervised, classification | [`algorithms/11_knn`](algorithms/11_knn) |
+| Gaussian Naive Bayes | Supervised, classification (probabilistic) | [`algorithms/12_naive_bayes`](algorithms/12_naive_bayes) |
+| Multinomial & Bernoulli Naive Bayes | Supervised, classification (probabilistic) | [`algorithms/13_multinomial_bernoulli_nb`](algorithms/13_multinomial_bernoulli_nb) |
+| LDA & QDA | Supervised, classification (probabilistic) | [`algorithms/14_discriminant_analysis`](algorithms/14_discriminant_analysis) |
+| Decision Tree | Supervised, classification (tree) | [`algorithms/15_decision_tree`](algorithms/15_decision_tree) |
+| Support Vector Machine | Supervised, classification (linear) | [`algorithms/16_svm`](algorithms/16_svm) |
+| Kernel SVM (SMO) | Supervised, classification (non-linear) | [`algorithms/17_kernel_svm`](algorithms/17_kernel_svm) |
+| Random Forest | Supervised, classification (ensemble) | [`algorithms/18_random_forest`](algorithms/18_random_forest) |
+| Gradient Boosting | Supervised, regression (ensemble) | [`algorithms/19_gradient_boosting`](algorithms/19_gradient_boosting) |
+| AdaBoost | Supervised, classification (ensemble) | [`algorithms/20_adaboost`](algorithms/20_adaboost) |
+| Neural Network (MLP) | Supervised, classification (deep learning) | [`algorithms/21_neural_network`](algorithms/21_neural_network) |
+| K-Means | Unsupervised, clustering | [`algorithms/22_kmeans`](algorithms/22_kmeans) |
+| DBSCAN | Unsupervised, density clustering | [`algorithms/23_dbscan`](algorithms/23_dbscan) |
+| PCA | Unsupervised, dimensionality reduction | [`algorithms/24_pca`](algorithms/24_pca) |
 
 ## Setup
 

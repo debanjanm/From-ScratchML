@@ -8,7 +8,7 @@ Boosting with decision **stumps** (one-split trees), each barely better than gue
 
 Prediction is `sign(Σ alpha · stump(x))`.
 
-Compare `13_gradient_boosting` (fits residuals) and `12_random_forest` (independent trees, parallel). Binary classification only; labels can be any two values.
+Compare `19_gradient_boosting` (fits residuals) and `18_random_forest` (independent trees, parallel). Binary classification only; labels can be any two values.
 
 ## Usage
 

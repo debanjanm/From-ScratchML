@@ -11,7 +11,7 @@ lam/2 * ||w||^2  +  mean( max(0, |y − (w·x + b)| − epsilon) )
 
 Only points on or outside the tube (the support vectors) affect the fit. Consequences: it ignores small noise, and a few extreme outliers pull far less than in least squares. `lam` plays the role of `1 / (C·n)` in scikit-learn's `SVR`.
 
-Linear kernel only here (see `11_svm` for the classifier). Scale features and `y`, since `epsilon` is measured in `y`'s units.
+Linear kernel only here (see `16_svm` for the classifier). Scale features and `y`, since `epsilon` is measured in `y`'s units.
 
 ## Usage
 
