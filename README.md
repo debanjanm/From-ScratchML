@@ -32,9 +32,14 @@ Popular ML algorithms implemented in raw Python + numpy — no scikit-learn/torc
 | XGBoost | Ensemble (boosting), second-order | [`algorithms/24_xgboost`](algorithms/24_xgboost) |
 | Voting & Stacking | Ensemble (combining different models) | [`algorithms/25_voting_stacking`](algorithms/25_voting_stacking) |
 | Neural Network (MLP) | Supervised, classification (deep learning) | [`algorithms/26_neural_network`](algorithms/26_neural_network) |
-| K-Means | Unsupervised, clustering | [`algorithms/27_kmeans`](algorithms/27_kmeans) |
-| DBSCAN | Unsupervised, density clustering | [`algorithms/28_dbscan`](algorithms/28_dbscan) |
-| PCA | Unsupervised, dimensionality reduction | [`algorithms/29_pca`](algorithms/29_pca) |
+| K-Means | Unsupervised, clustering (centroid) | [`algorithms/27_kmeans`](algorithms/27_kmeans) |
+| K-Medoids | Unsupervised, clustering (medoid, any metric) | [`algorithms/28_kmedoids`](algorithms/28_kmedoids) |
+| Gaussian Mixture (EM) | Unsupervised, clustering (probabilistic) | [`algorithms/29_gaussian_mixture`](algorithms/29_gaussian_mixture) |
+| Hierarchical Clustering | Unsupervised, clustering (tree) | [`algorithms/30_hierarchical_clustering`](algorithms/30_hierarchical_clustering) |
+| Mean Shift | Unsupervised, clustering (mode seeking) | [`algorithms/31_mean_shift`](algorithms/31_mean_shift) |
+| DBSCAN | Unsupervised, clustering (density) | [`algorithms/32_dbscan`](algorithms/32_dbscan) |
+| Spectral Clustering | Unsupervised, clustering (graph) | [`algorithms/33_spectral_clustering`](algorithms/33_spectral_clustering) |
+| PCA | Unsupervised, dimensionality reduction | [`algorithms/34_pca`](algorithms/34_pca) |
 
 ## Setup
 
