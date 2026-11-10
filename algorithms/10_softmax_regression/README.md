@@ -8,7 +8,7 @@ P(class k | x) = exp(x·W_k + b_k) / Σ_j exp(x·W_j + b_j)
 
 Trained by gradient descent on cross-entropy. The gradient has the same neat form as the binary case: `Xᵀ(P − Y) / n`, where `Y` is the one-hot target. With 2 classes it reduces to ordinary logistic regression.
 
-This is also exactly the output layer of `21_neural_network`.
+This is also exactly the output layer of `26_neural_network`.
 
 Softmax subtracts the row maximum before `exp` so large scores can't overflow. Scale features first.
 

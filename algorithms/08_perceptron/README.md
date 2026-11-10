@@ -9,7 +9,7 @@ if y * (w·x + b) <= 0:      # y in {-1, +1}
 ```
 
 - **Guaranteed to converge** if the classes are linearly separable (the perceptron convergence theorem), after which `errors_` hits 0.
-- **Never converges** otherwise — XOR is the classic counter-example, which is what motivated multi-layer networks (`21_neural_network`).
+- **Never converges** otherwise — XOR is the classic counter-example, which is what motivated multi-layer networks (`26_neural_network`).
 - It finds *a* separating line, not the widest-margin one (that is `16_svm`), and gives no probabilities (that is `09_logistic_regression`).
 
 Binary only; labels can be any two values.

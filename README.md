@@ -23,13 +23,18 @@ Popular ML algorithms implemented in raw Python + numpy — no scikit-learn/torc
 | Decision Tree | Supervised, classification (tree) | [`algorithms/15_decision_tree`](algorithms/15_decision_tree) |
 | Support Vector Machine | Supervised, classification (linear) | [`algorithms/16_svm`](algorithms/16_svm) |
 | Kernel SVM (SMO) | Supervised, classification (non-linear) | [`algorithms/17_kernel_svm`](algorithms/17_kernel_svm) |
-| Random Forest | Supervised, classification (ensemble) | [`algorithms/18_random_forest`](algorithms/18_random_forest) |
-| Gradient Boosting | Supervised, regression (ensemble) | [`algorithms/19_gradient_boosting`](algorithms/19_gradient_boosting) |
-| AdaBoost | Supervised, classification (ensemble) | [`algorithms/20_adaboost`](algorithms/20_adaboost) |
-| Neural Network (MLP) | Supervised, classification (deep learning) | [`algorithms/21_neural_network`](algorithms/21_neural_network) |
-| K-Means | Unsupervised, clustering | [`algorithms/22_kmeans`](algorithms/22_kmeans) |
-| DBSCAN | Unsupervised, density clustering | [`algorithms/23_dbscan`](algorithms/23_dbscan) |
-| PCA | Unsupervised, dimensionality reduction | [`algorithms/24_pca`](algorithms/24_pca) |
+| Bagging | Ensemble (parallel) | [`algorithms/18_bagging`](algorithms/18_bagging) |
+| Random Forest | Ensemble (parallel) | [`algorithms/19_random_forest`](algorithms/19_random_forest) |
+| Extra Trees | Ensemble (parallel) | [`algorithms/20_extra_trees`](algorithms/20_extra_trees) |
+| AdaBoost | Ensemble (boosting) | [`algorithms/21_adaboost`](algorithms/21_adaboost) |
+| Gradient Boosting | Ensemble (boosting), regression | [`algorithms/22_gradient_boosting`](algorithms/22_gradient_boosting) |
+| Gradient Boosting Classifier | Ensemble (boosting), classification | [`algorithms/23_gradient_boosting_classifier`](algorithms/23_gradient_boosting_classifier) |
+| XGBoost | Ensemble (boosting), second-order | [`algorithms/24_xgboost`](algorithms/24_xgboost) |
+| Voting & Stacking | Ensemble (combining different models) | [`algorithms/25_voting_stacking`](algorithms/25_voting_stacking) |
+| Neural Network (MLP) | Supervised, classification (deep learning) | [`algorithms/26_neural_network`](algorithms/26_neural_network) |
+| K-Means | Unsupervised, clustering | [`algorithms/27_kmeans`](algorithms/27_kmeans) |
+| DBSCAN | Unsupervised, density clustering | [`algorithms/28_dbscan`](algorithms/28_dbscan) |
+| PCA | Unsupervised, dimensionality reduction | [`algorithms/29_pca`](algorithms/29_pca) |
 
 ## Setup
 
