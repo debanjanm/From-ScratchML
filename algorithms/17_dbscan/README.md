@@ -6,7 +6,7 @@ Density-based clustering. No `k` to choose, finds arbitrarily shaped clusters, a
 - A cluster starts at an unvisited core point and grows through every core point reachable from it. **Border points** (within `eps` of a core point, but not core themselves) join the cluster without extending it.
 - Anything left over is **noise**.
 
-Compared to K-Means (`12_kmeans`): handles non-convex shapes such as two moons, and needs no cluster count — but `eps` must suit the data's scale.
+Compared to K-Means (`16_kmeans`): handles non-convex shapes such as two moons, and needs no cluster count — but `eps` must suit the data's scale.
 
 Uses a full pairwise distance matrix (O(n²) memory), fine for the sizes this repo targets.
 
