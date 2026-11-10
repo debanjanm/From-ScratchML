@@ -40,6 +40,10 @@ Popular ML algorithms implemented in raw Python + numpy — no scikit-learn/torc
 | DBSCAN | Unsupervised, clustering (density) | [`algorithms/32_dbscan`](algorithms/32_dbscan) |
 | Spectral Clustering | Unsupervised, clustering (graph) | [`algorithms/33_spectral_clustering`](algorithms/33_spectral_clustering) |
 | PCA | Unsupervised, dimensionality reduction | [`algorithms/34_pca`](algorithms/34_pca) |
+| Truncated SVD | Unsupervised, dimensionality reduction | [`algorithms/35_svd`](algorithms/35_svd) |
+| Kernel PCA | Unsupervised, dimensionality reduction | [`algorithms/36_kernel_pca`](algorithms/36_kernel_pca) |
+| LDA Projection | Supervised, dimensionality reduction | [`algorithms/37_lda_projection`](algorithms/37_lda_projection) |
+| t-SNE | Unsupervised, dimensionality reduction (visualization) | [`algorithms/38_tsne`](algorithms/38_tsne) |
 
 ## Setup
 
