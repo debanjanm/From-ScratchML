@@ -44,6 +44,8 @@ Popular ML algorithms implemented in raw Python + numpy — no scikit-learn/torc
 | Kernel PCA | Unsupervised, dimensionality reduction | [`algorithms/36_kernel_pca`](algorithms/36_kernel_pca) |
 | LDA Projection | Supervised, dimensionality reduction | [`algorithms/37_lda_projection`](algorithms/37_lda_projection) |
 | t-SNE | Unsupervised, dimensionality reduction (visualization) | [`algorithms/38_tsne`](algorithms/38_tsne) |
+| Isolation Forest | Unsupervised, anomaly detection | [`algorithms/39_isolation_forest`](algorithms/39_isolation_forest) |
+| Local Outlier Factor | Unsupervised, anomaly detection | [`algorithms/40_local_outlier_factor`](algorithms/40_local_outlier_factor) |
 
 ## Setup
 
