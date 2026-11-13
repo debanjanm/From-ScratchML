@@ -2,6 +2,8 @@
 
 Popular ML algorithms implemented in raw Python + numpy — no scikit-learn/torch in the core implementations. Each algorithm is self-contained: implementation, test, and a runnable demo that checks results against scikit-learn for correctness.
 
+> Preparing for interviews? See [INTERVIEW_GUIDE.md](INTERVIEW_GUIDE.md): how to think, how to remember these, and the numpy tricks that repeat.
+
 ## Algorithms
 
 | Algorithm | Type | Path |
