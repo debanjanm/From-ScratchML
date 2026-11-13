@@ -46,6 +46,8 @@ Popular ML algorithms implemented in raw Python + numpy — no scikit-learn/torc
 | t-SNE | Unsupervised, dimensionality reduction (visualization) | [`algorithms/38_tsne`](algorithms/38_tsne) |
 | Isolation Forest | Unsupervised, anomaly detection | [`algorithms/39_isolation_forest`](algorithms/39_isolation_forest) |
 | Local Outlier Factor | Unsupervised, anomaly detection | [`algorithms/40_local_outlier_factor`](algorithms/40_local_outlier_factor) |
+| Bayesian Linear Regression | Supervised, regression (probabilistic) | [`algorithms/41_bayesian_linear_regression`](algorithms/41_bayesian_linear_regression) |
+| Hidden Markov Model | Probabilistic, sequence model | [`algorithms/42_hidden_markov_model`](algorithms/42_hidden_markov_model) |
 
 ## Setup
 
