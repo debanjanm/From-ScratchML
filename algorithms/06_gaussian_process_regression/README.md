@@ -1,27 +1,5 @@
 # Gaussian Process Regression
 
-> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+A prior over functions conditioned on data: a prediction plus an uncertainty band that widens away from the data.
 
-A non-parametric, Bayesian approach: instead of learning weights, put a prior over *functions* and condition it on the data. The result is a prediction **and an uncertainty** at every point.
-
-With an RBF kernel `k(a, b) = variance · exp(−‖a − b‖² / 2·length_scale²)` (nearby inputs → similar outputs) and `K = k(X, X) + noise²·I`:
-
-```
-mean(x*) = k(x*, X) · K⁻¹ y
-var(x*)  = k(x*, x*) − k(x*, X) · K⁻¹ · k(X, x*)
-```
-
-K is factored with a Cholesky decomposition rather than inverted directly. Near training points the std shrinks; far from them the prediction reverts to the prior (mean 0, std `√variance`).
-
-- `length_scale`: how quickly the function wiggles. `variance`: output scale. `noise`: observation noise std.
-- Hyperparameters are fixed here; picking them by maximizing marginal likelihood is a natural extension.
-- Cost is O(n³), so it suits small datasets.
-
-## Usage
-
-```python
-# (the class lives in notebook.ipynb)
-
-gp = GaussianProcessRegressor(length_scale=1.0, variance=1.0, noise=0.1).fit(X_train, y_train)
-mean, std = gp.predict(X_test, return_std=True)
-```
+**Open [`notebook.ipynb`](notebook.ipynb)** for the explanation, the numpy implementation, visualizations, a check against a reference library, and tests.

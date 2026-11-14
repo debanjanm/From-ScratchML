@@ -70,4 +70,12 @@ algorithms/<name>/
 
 Open a notebook and run all cells. Every notebook is self-contained (no cross-imports), and its last sections re-run the assertion tests and the comparison against the reference library, so a green notebook means the implementation is correct. The outputs are saved in the files, so GitHub also renders the plots without running anything.
 
+To re-check every algorithm from the command line (each notebook runs in memory; a failing assertion or error is reported and the exit code is 1):
+
+```bash
+python run_notebooks.py                           # all notebooks, changes nothing
+python run_notebooks.py 15_decision_tree 34_pca   # only some (folder names or number prefixes)
+python run_notebooks.py --save                    # also write the fresh outputs back into the notebooks
+```
+
 Optional extras used for comparisons in a couple of notebooks: `xgboost` (24) and `hmmlearn` (42). They are skipped automatically if not installed.

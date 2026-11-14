@@ -1,14 +1,5 @@
 # Gaussian Naive Bayes
 
-> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+Gaussian naive Bayes: per-class, per-feature normal distributions combined with Bayes' rule.
 
-Assumes each feature is normally distributed within a class and independent given the class. Fits per-class mean/variance, predicts via Bayes' rule using log-probabilities for numerical stability.
-
-## Usage
-
-```python
-# (the class lives in notebook.ipynb)
-
-model = GaussianNaiveBayes().fit(X_train, y_train)
-preds = model.predict(X_test)
-```
+**Open [`notebook.ipynb`](notebook.ipynb)** for the explanation, the numpy implementation, visualizations, a check against a reference library, and tests.
