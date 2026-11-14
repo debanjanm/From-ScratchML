@@ -1,5 +1,7 @@
 # Kernel PCA
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 PCA (`34_pca`) can only find **straight** directions, so it cannot untangle two concentric rings: both have the same mean and the same variance in every direction. Kernel PCA does PCA in a **curved, high-dimensional feature space** `φ(x)` — without ever computing `φ`, thanks to the kernel trick.
 
 ## How it works
@@ -19,16 +21,9 @@ Cost: stores and eigendecomposes the full `n × n` matrix (`O(n²)` memory, `O(n
 ## Usage
 
 ```python
-from model import KernelPCA
+# (the class lives in notebook.ipynb)
 
 kpca = KernelPCA(n_components=2, kernel="rbf", gamma=10).fit(X)
 Z = kpca.transform(X)
 Z_new = kpca.transform(X_new)   # unseen points
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

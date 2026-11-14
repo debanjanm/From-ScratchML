@@ -1,5 +1,7 @@
 # Neural Network (MLP classifier)
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Feedforward network with ReLU hidden layers and a softmax output, trained with cross-entropy loss.
 
 **Forward:** `a = relu(a_prev @ W + b)` per hidden layer; the last layer outputs logits, then softmax gives class probabilities.
@@ -12,12 +14,12 @@ db = dz.sum(0)
 dz_prev = (dz @ W.T) * (z_prev > 0)     # through the weights, then the ReLU gate
 ```
 
-Weights use He initialization and are updated by mini-batch gradient descent. `test_model.py` checks the hand-written gradients against finite differences — the standard way to verify backprop.
+Weights use He initialization and are updated by mini-batch gradient descent. The notebook's tests check the hand-written gradients against finite differences — the standard way to verify backprop.
 
 ## Usage
 
 ```python
-from model import NeuralNetClassifier
+# (the class lives in notebook.ipynb)
 
 net = NeuralNetClassifier(hidden_sizes=(32,), lr=0.1, epochs=50).fit(X_train, y_train)
 preds = net.predict(X_test)
@@ -26,10 +28,3 @@ print(net.loss_history_)   # training loss per epoch
 ```
 
 Scale inputs first (e.g. standardize, or divide pixels by 255).
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
-```

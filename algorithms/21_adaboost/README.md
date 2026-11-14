@@ -1,5 +1,7 @@
 # AdaBoost
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Boosting with decision **stumps** (one-split trees), each barely better than guessing. Rounds are sequential:
 
 1. Train a stump on the weighted data; compute its weighted error `err`.
@@ -13,16 +15,9 @@ Compare `22_gradient_boosting` (fits residuals) and `19_random_forest` (independ
 ## Usage
 
 ```python
-from model import AdaBoostClassifier
+# (the class lives in notebook.ipynb)
 
 model = AdaBoostClassifier(n_estimators=50).fit(X_train, y_train)
 preds = model.predict(X_test)
 scores = model.decision_function(X_test)   # signed vote total
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

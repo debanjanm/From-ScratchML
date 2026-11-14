@@ -1,5 +1,7 @@
 # Support Vector Machine (linear)
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Finds the hyperplane `w·x + b = 0` that separates two classes with the widest margin. Trained by subgradient descent on the regularized hinge loss:
 
 ```
@@ -13,16 +15,9 @@ Binary only, linear kernel. Scale features first (the demo uses `StandardScaler`
 ## Usage
 
 ```python
-from model import LinearSVM
+# (the class lives in notebook.ipynb)
 
 model = LinearSVM(lam=0.01, n_iters=1000).fit(X_train, y_train)
 preds = model.predict(X_test)
 scores = model.decision_function(X_test)  # signed distance-like score
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

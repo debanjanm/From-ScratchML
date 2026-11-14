@@ -1,5 +1,7 @@
 # Gradient Boosting Classifier
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 `22_gradient_boosting` fit residuals `y − F(x)` for regression. Classification uses the same idea with a different loss:
 
 1. Keep one raw score `F_k(x)` per class; probabilities are `softmax(F)`.
@@ -13,16 +15,9 @@ Start point is the class priors as log-odds. Cost: `n_estimators × n_classes` t
 ## Usage
 
 ```python
-from model import GradientBoostingClassifier
+# (the class lives in notebook.ipynb)
 
 model = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3).fit(X_train, y_train)
 preds = model.predict(X_test)
 probs = model.predict_proba(X_test)
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

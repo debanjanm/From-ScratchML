@@ -1,5 +1,7 @@
 # Linear and Quadratic Discriminant Analysis
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Generative classifiers: model each class as a **multivariate Gaussian** (its own mean), then classify by Bayes' rule — pick the class with the highest posterior. Unlike Gaussian Naive Bayes (`12_naive_bayes`), features are **not** assumed independent: the full covariance matrix is used, so correlated features are handled properly.
 
 | | Covariance | Decision boundary | Use when |
@@ -14,16 +16,9 @@ Scores are log-posteriors up to a constant; the class priors come from the train
 ## Usage
 
 ```python
-from model import LinearDiscriminantAnalysis, QuadraticDiscriminantAnalysis
+# (the class lives in notebook.ipynb)
 
 lda = LinearDiscriminantAnalysis().fit(X_train, y_train)
 qda = QuadraticDiscriminantAnalysis(reg=1e-6).fit(X_train, y_train)
 preds = lda.predict(X_test)
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

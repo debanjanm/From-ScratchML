@@ -15,7 +15,7 @@ How to use this repo for ML interviews: how to think, how to remember 42 algorit
    - **Solver** — closed form, gradient descent, greedy search, EM, or eigendecomposition?
 3. **Derive the one formula that matters.** Don't recite. Derive the gradient or the update from the loss in three lines.
 4. **Write the skeleton first.** `__init__` → `fit` → `predict`, shapes in comments. Fill in the math after.
-5. **Check it.** Say how you would know it is right: gradient check, compare to a brute-force version, loss goes down, a tiny example by hand. The `test_model.py` in each folder shows the check for that algorithm.
+5. **Check it.** Say how you would know it is right: gradient check, compare to a brute-force version, loss goes down, a tiny example by hand. The *Tests* section of each notebook shows the check for that algorithm.
 6. **Finish with trade-offs.** Complexity, assumptions, when it breaks, what you would use instead. This is where senior answers separate from junior ones.
 
 ### The questions interviewers keep asking
@@ -65,9 +65,9 @@ Left over: `06` GP and `41` Bayesian LR (Gaussian posterior over functions/weigh
 
 1. **Compress each algorithm to one line, then expand from the loss.** Example for logistic regression: *"sigmoid of linear, cross-entropy loss, gradient `Xᵀ(p − y)/n`."* If you can say that, you can derive and code the rest.
 2. **Learn the twists, not the algorithms.** Ridge vs. lasso differ by *one term*. Logistic vs. softmax differ by *sigmoid → softmax*. RF vs. bagging: *random feature subset per split*. Extra Trees vs. RF: *random thresholds*. AdaBoost vs. GB: *reweight samples* vs. *fit residuals*.
-3. **Know one failure case per algorithm.** K-Means on moons, NB with correlated features, kNN in high dimensions, PCA when signal is non-linear, unscaled SVM. Each folder's `demo.py` has the contrast.
-4. **Rewrite from a blank file.** Reading is not remembering. Pick an algorithm, open an empty file, time 20 minutes, then diff against the repo's `model.py`. Repeat in 3 days, then in 10.
-5. **Use the tests as a checklist.** `test_model.py` lists what must be true of the algorithm (loss decreases, probabilities sum to 1, gradient matches finite differences). Knowing the invariants is knowing the algorithm.
+3. **Know one failure case per algorithm.** K-Means on moons, NB with correlated features, kNN in high dimensions, PCA when signal is non-linear, unscaled SVM. Each notebook's *See it work* section shows the contrast.
+4. **Rewrite from a blank file.** Reading is not remembering. Pick an algorithm, open an empty file, time 20 minutes, then compare against the *Implementation* cell of the notebook. Repeat in 3 days, then in 10.
+5. **Use the tests as a checklist.** The *Tests* cells list what must be true of the algorithm (loss decreases, probabilities sum to 1, gradient matches finite differences). Knowing the invariants is knowing the algorithm.
 6. **Compare in pairs.** Doing two similar things side by side (Ridge/Lasso, RF/Extra Trees, K-Means/K-Medoids, PCA/Kernel PCA/LDA) sticks better than studying each alone.
 
 ### The "must write from memory" list (highest frequency in interviews)

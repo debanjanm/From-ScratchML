@@ -1,5 +1,7 @@
 # Isolation Forest
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Most anomaly detectors first model what "normal" looks like, then flag what doesn't fit. Isolation Forest flips it: **anomalies are few and different, so they are easy to isolate.**
 
 ## How it works
@@ -24,16 +26,9 @@ Note: scikit-learn's `score_samples` returns the **negative** of this score (hig
 ## Usage
 
 ```python
-from model import IsolationForest
+# (the class lives in notebook.ipynb)
 
 forest = IsolationForest(n_estimators=100, contamination=0.05).fit(X)
 forest.score_samples(X)    # in (0, 1), higher = more anomalous
 forest.predict(X_new)      # -1 anomaly, 1 normal
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

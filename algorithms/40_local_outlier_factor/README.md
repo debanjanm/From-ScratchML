@@ -1,5 +1,7 @@
 # Local Outlier Factor (LOF)
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 "Far from everything" is the wrong test when clusters have **different densities**. A point 1 unit from a razor-tight cluster is clearly out of place; a point 1 unit from its neighbours in a sparse cluster is perfectly normal. LOF asks instead: **is this point sparser than the points around it?**
 
 ## How it works
@@ -27,17 +29,10 @@ Compare `39_isolation_forest`: that one needs no distances and scales better, bu
 ## Usage
 
 ```python
-from model import LocalOutlierFactor
+# (the class lives in notebook.ipynb)
 
 lof = LocalOutlierFactor(n_neighbors=20, contamination=0.05)
 labels = lof.fit_predict(X)            # -1 outlier, 1 inlier (training points)
 lof.negative_outlier_factor_           # -LOF per training point
 lof.predict(X_new)                     # new points, scored against the training set
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

@@ -1,5 +1,7 @@
 # Bayesian Linear Regression
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Ordinary linear regression (`01_linear_regression`) returns **one** weight vector and predictions with no sense of how sure it is. Bayesian linear regression keeps a whole **distribution** over the weights, so every prediction comes with an error bar that is honest about both noise in the data and ignorance about the model.
 
 ## How it works
@@ -42,17 +44,10 @@ Linear in the *weights* only: feed it polynomial or other basis features to fit 
 ## Usage
 
 ```python
-from model import BayesianLinearRegression
+# (the class lives in notebook.ipynb)
 
 model = BayesianLinearRegression().fit(X, y)
 mean, std = model.predict(X_new, return_std=True)   # std includes the noise
 model.coef_, model.sigma_                           # posterior mean and covariance of the weights
 model.alpha_, model.lambda_                         # learned precisions
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

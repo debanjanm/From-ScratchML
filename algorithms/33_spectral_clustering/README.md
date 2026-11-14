@@ -1,5 +1,7 @@
 # Spectral Clustering
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 K-Means (`27_kmeans`) assumes round clusters around a centre, so it cuts two interleaved moons or two concentric rings straight through. Spectral clustering groups points by **connectivity** instead: points that are linked by a chain of near neighbours belong together, whatever the shape.
 
 ## How it works
@@ -18,15 +20,8 @@ Cost: dense `O(n²)` memory and an `O(n³)` eigendecomposition — fine for a fe
 ## Usage
 
 ```python
-from model import SpectralClustering
+# (the class lives in notebook.ipynb)
 
 labels = SpectralClustering(n_clusters=2, affinity="nearest_neighbors", n_neighbors=10).fit_predict(X)
 labels = SpectralClustering(n_clusters=2, affinity="rbf", gamma=20.0).fit_predict(X)
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

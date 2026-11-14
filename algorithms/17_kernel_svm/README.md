@@ -1,5 +1,7 @@
 # Kernel SVM (SMO)
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 The linear SVM (`16_svm`) can only draw straight boundaries. The **kernel trick** fixes that: replace every dot product `x·x'` with a kernel `k(x, x')` that equals a dot product in some much richer feature space — without ever constructing that space.
 
 | Kernel | `k(x, x')` | Boundary |
@@ -23,16 +25,9 @@ f(x) = Σ alpha_i · y_i · k(x_i, x) + b
 ## Usage
 
 ```python
-from model import KernelSVM
+# (the class lives in notebook.ipynb)
 
 model = KernelSVM(kernel="rbf", C=1.0, gamma=1.0).fit(X_train, y_train)
 preds = model.predict(X_test)
 print(len(model.support_vectors_))
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

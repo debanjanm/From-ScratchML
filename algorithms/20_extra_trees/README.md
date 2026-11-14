@@ -1,5 +1,7 @@
 # Extra Trees (Extremely Randomized Trees)
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 A Random Forest (`19_random_forest`) with two changes that add even more randomness:
 
 | | Random Forest | Extra Trees |
@@ -13,15 +15,8 @@ At each node, a random threshold is drawn for each candidate feature and the bes
 ## Usage
 
 ```python
-from model import ExtraTreesClassifier
+# (the class lives in notebook.ipynb)
 
 model = ExtraTreesClassifier(n_estimators=100).fit(X_train, y_train)
 preds = model.predict(X_test)
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

@@ -1,5 +1,7 @@
 # DBSCAN
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Density-based clustering. No `k` to choose, finds arbitrarily shaped clusters, and labels outliers as noise (`-1`).
 
 - A point is a **core point** if at least `min_samples` points (itself included) lie within distance `eps`.
@@ -13,14 +15,7 @@ Uses a full pairwise distance matrix (O(n²) memory), fine for the sizes this re
 ## Usage
 
 ```python
-from model import DBSCAN
+# (the class lives in notebook.ipynb)
 
 labels = DBSCAN(eps=0.2, min_samples=5).fit_predict(X)   # -1 = noise
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

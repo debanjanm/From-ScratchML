@@ -1,5 +1,7 @@
 # Voting and Stacking
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Where bagging and boosting build many copies of *one kind* of model, these two combine **different kinds** of models (logistic regression + KNN + a tree, say). Their errors tend to differ, so combining them beats each one alone.
 
 The base learners are **plugged in from outside** — anything with `fit` / `predict` (and optionally `predict_proba`), from this repo or elsewhere.
@@ -26,17 +28,10 @@ Default meta-model is a built-in softmax regression; pass `final_estimator=` to 
 ## Usage
 
 ```python
-from model import VotingClassifier, StackingClassifier
+# (the class lives in notebook.ipynb)
 
 base = [("a", ModelA()), ("b", ModelB()), ("c", ModelC())]
 vote = VotingClassifier(base, voting="soft").fit(X_train, y_train)
 stack = StackingClassifier(base, cv=5).fit(X_train, y_train)
 preds = stack.predict(X_test)
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

@@ -1,5 +1,7 @@
 # Mean Shift
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 A clustering algorithm that **finds the number of clusters by itself**. Picture the data as a landscape where dense regions are hills. Put a window of radius `bandwidth` on every point and repeatedly:
 
 > move the point to the **mean** of all data points inside its window
@@ -18,17 +20,10 @@ That mean is always uphill (toward where the data is denser), so every point cli
 ## Usage
 
 ```python
-from model import MeanShift
+# (the class lives in notebook.ipynb)
 
 model = MeanShift(bandwidth=2.0).fit(X)
 model.cluster_centers_    # the modes it discovered
 model.labels_
 model.predict(X_new)      # nearest mode
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

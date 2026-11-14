@@ -1,5 +1,7 @@
 # Truncated SVD
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Every matrix factors as `X = U · S · Vᵀ`: `V` holds orthonormal directions in feature space, `S` the strength of each, `U` the coordinates of each sample. Keep only the `k` largest singular values and you get the **best rank-`k` approximation of `X`** (Eckart–Young): no other rank-`k` matrix is closer.
 
 ## How it works
@@ -20,17 +22,10 @@ Common uses: latent semantic analysis (documents × terms), image compression, d
 ## Usage
 
 ```python
-from model import TruncatedSVD
+# (the class lives in notebook.ipynb)
 
 svd = TruncatedSVD(n_components=10).fit(X)
 Z = svd.transform(X)               # n x 10
 X_approx = svd.inverse_transform(Z)  # rank-10 reconstruction
 svd.singular_values_, svd.explained_variance_ratio_
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

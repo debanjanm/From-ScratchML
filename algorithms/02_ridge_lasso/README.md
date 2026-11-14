@@ -1,5 +1,7 @@
 # Ridge and Lasso Regression
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Linear regression with a penalty on the weights, to fight overfitting. The bias is never penalized (data is centered first). Objectives follow scikit-learn's conventions so coefficients are directly comparable.
 
 | | Penalty | Objective | Solver | Effect |
@@ -14,17 +16,10 @@ Standardize features first if they have different scales — the penalty treats 
 ## Usage
 
 ```python
-from model import RidgeRegression, LassoRegression
+# (the class lives in notebook.ipynb)
 
 ridge = RidgeRegression(alpha=10.0).fit(X_train, y_train)
 lasso = LassoRegression(alpha=1.0).fit(X_train, y_train)
 print(lasso.weights)          # irrelevant features come out as exactly 0
 preds = ridge.predict(X_test)
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

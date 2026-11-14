@@ -1,5 +1,7 @@
 # Bagging
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 **B**ootstrap **agg**regat**ing**. Train many models, each on a different random resample of the training set (drawn *with replacement*, so ~63% of the distinct rows appear), then combine by majority vote.
 
 Why it works: a deep decision tree has low bias but **high variance** — change the data slightly and the tree changes a lot. Averaging many such trees cancels the noise while keeping the low bias. Models that are already stable (e.g. linear regression) gain little.
@@ -13,16 +15,9 @@ Next steps from here: `19_random_forest` also samples *features* at each split t
 ## Usage
 
 ```python
-from model import BaggingClassifier
+# (the class lives in notebook.ipynb)
 
 model = BaggingClassifier(n_estimators=50).fit(X_train, y_train)
 preds = model.predict(X_test)
 print(model.oob_score_)
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

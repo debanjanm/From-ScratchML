@@ -1,5 +1,7 @@
 # Perceptron
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 The simplest neural unit and the ancestor of logistic regression, SVMs and the MLP. It draws a line `w·x + b = 0`; whenever a sample lands on the wrong side, push the line toward it:
 
 ```
@@ -17,16 +19,9 @@ Binary only; labels can be any two values.
 ## Usage
 
 ```python
-from model import Perceptron
+# (the class lives in notebook.ipynb)
 
 model = Perceptron(epochs=100).fit(X_train, y_train)
 preds = model.predict(X_test)
 print(model.errors_)    # mistakes per epoch
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

@@ -1,5 +1,7 @@
 # Decision Tree Regressor
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Same recursive splitting as the classifier (`15_decision_tree`), but for a continuous target:
 
 - a split is chosen to minimize the squared error of the two sides (variance reduction)
@@ -12,15 +14,8 @@ Splits are found in one pass per feature using cumulative sums over the sorted v
 ## Usage
 
 ```python
-from model import DecisionTreeRegressor
+# (the class lives in notebook.ipynb)
 
 model = DecisionTreeRegressor(max_depth=5).fit(X_train, y_train)
 preds = model.predict(X_test)
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

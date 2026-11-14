@@ -1,5 +1,7 @@
 # Multinomial and Bernoulli Naive Bayes
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Same idea as `12_naive_bayes` (Bayes' rule + assume features are independent given the class), but for **discrete** features instead of continuous Gaussian ones — the standard choice for text.
 
 | | Features | Likelihood of a sample | Absence is evidence? |
@@ -16,16 +18,9 @@ Rule of thumb: use Multinomial when word *frequency* matters (long documents), B
 ## Usage
 
 ```python
-from model import MultinomialNB, BernoulliNB
+# (the class lives in notebook.ipynb)
 
 counts_model = MultinomialNB(alpha=1.0).fit(X_counts, y)
 binary_model = BernoulliNB(alpha=1.0).fit((X_counts > 0).astype(float), y)
 preds = counts_model.predict(X_new)
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

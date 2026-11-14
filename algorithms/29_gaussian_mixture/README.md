@@ -1,5 +1,7 @@
 # Gaussian Mixture Model (EM)
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Model the data as coming from `k` Gaussians, each with its own **weight, mean and full covariance**. This is K-Means (`27_kmeans`) made probabilistic:
 
 | | K-Means | Gaussian Mixture |
@@ -24,17 +26,10 @@ Each iteration provably never lowers the log-likelihood (`log_likelihood_history
 ## Usage
 
 ```python
-from model import GaussianMixture
+# (the class lives in notebook.ipynb)
 
 gmm = GaussianMixture(n_components=3).fit(X)
 gmm.means_, gmm.covariances_, gmm.weights_
 gmm.predict_proba(X)     # soft assignments
 gmm.bic(X)
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

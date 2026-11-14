@@ -1,5 +1,7 @@
 # Linear Regression
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Fits `y = Xw + b` by minimizing mean squared error.
 
 ## Methods
@@ -10,15 +12,8 @@ Fits `y = Xw + b` by minimizing mean squared error.
 ## Usage
 
 ```python
-from model import LinearRegression
+# (the class lives in notebook.ipynb)
 
 model = LinearRegression(method="normal_equation").fit(X, y)
 preds = model.predict(X_test)
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

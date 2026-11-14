@@ -1,5 +1,7 @@
 # XGBoost (from scratch)
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Gradient boosting (`22_gradient_boosting`, `23_gradient_boosting_classifier`) taken to second order, plus regularization. Each sample has a **gradient** `g` and a **hessian** `h` of the loss at the current prediction:
 
 | objective | `g` | `h` |
@@ -31,16 +33,9 @@ Missing from the real library (listed in the code): row/column subsampling, hist
 ## Usage
 
 ```python
-from model import XGBoost
+# (the class lives in notebook.ipynb)
 
 reg = XGBoost("reg:squarederror", n_estimators=100, learning_rate=0.3, max_depth=3).fit(X_train, y_train)
 clf = XGBoost("binary:logistic", reg_lambda=1.0, gamma=0.1).fit(X_train, y_train)
 preds, probs = clf.predict(X_test), clf.predict_proba(X_test)
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

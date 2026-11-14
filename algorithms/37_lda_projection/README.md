@@ -1,5 +1,7 @@
 # LDA Projection (Fisher's Linear Discriminant)
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 PCA (`34_pca`) keeps the directions of **largest variance** and never looks at the labels — so it can happily keep a direction that is all noise. LDA is the **supervised** alternative: it picks the directions that best **separate the classes**.
 
 (`14_discriminant_analysis` uses the same maths as a classifier. This folder uses it to *reduce dimensions*.)
@@ -19,16 +21,9 @@ Use it when you have labels and want a small, class-aware embedding (visualisati
 ## Usage
 
 ```python
-from model import LDAProjection
+# (the class lives in notebook.ipynb)
 
 lda = LDAProjection(n_components=2).fit(X, y)
 Z = lda.transform(X)
 lda.eigenvalues_, lda.explained_variance_ratio_
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

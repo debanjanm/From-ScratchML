@@ -1,5 +1,7 @@
 # Hidden Markov Model
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 A sequence model where the thing you care about is **hidden**. A hidden state hops around a Markov chain, and at every step it emits a visible symbol. You see only the symbols (umbrella, no umbrella…) and want to reason about the states (rain, sun…). Used for speech, part-of-speech tagging, gene finding, regime detection.
 
 ## Parameters
@@ -33,18 +35,11 @@ Messages are rescaled at every time step (`cₜ`) so a 20 000-step sequence does
 ## Usage
 
 ```python
-from model import HiddenMarkovModel
+# (the class lives in notebook.ipynb)
 
 hmm = HiddenMarkovModel(n_states=2, n_symbols=3).fit(sequences)   # list of int arrays, or one array
 hmm.A_, hmm.B_, hmm.pi_
 hmm.score(obs)           # log-likelihood
 hmm.decode(obs)          # (most likely states, log-prob)
 hmm.predict_proba(obs)   # P(state_t | whole sequence)
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

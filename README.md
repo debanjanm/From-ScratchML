@@ -1,6 +1,6 @@
 # From-ScratchML
 
-Popular ML algorithms implemented in raw Python + numpy — no scikit-learn/torch in the core implementations. Each algorithm is self-contained: implementation, test, and a runnable demo that checks results against scikit-learn for correctness.
+Popular ML algorithms implemented in raw Python + numpy — no scikit-learn/torch in the core implementations. Each algorithm lives in its own folder as a single Jupyter notebook: explanation, the numpy implementation, visualizations, a check against scikit-learn (or scipy / the real library), and tests, all runnable top to bottom.
 
 > Preparing for interviews? See [INTERVIEW_GUIDE.md](INTERVIEW_GUIDE.md): how to think, how to remember these, and the numpy tricks that repeat.
 
@@ -55,6 +55,7 @@ Popular ML algorithms implemented in raw Python + numpy — no scikit-learn/torc
 
 ```bash
 pip install -r requirements.txt
+jupyter lab        # then open any algorithms/<name>/notebook.ipynb
 ```
 
 ## Usage
@@ -63,15 +64,10 @@ Each algorithm folder has the same layout:
 
 ```
 algorithms/<name>/
-├── model.py       # the from-scratch implementation
-├── test_model.py  # assert-based correctness checks
-├── demo.py        # runnable example, compares against scikit-learn
-└── README.md      # math + usage notes
+├── notebook.ipynb   # explanation + from-scratch implementation + visualizations + sklearn check + tests
+└── README.md        # short summary of the math and the API
 ```
 
-Run any algorithm's test or demo directly:
+Open a notebook and run all cells. Every notebook is self-contained (no cross-imports), and its last sections re-run the assertion tests and the comparison against the reference library, so a green notebook means the implementation is correct. The outputs are saved in the files, so GitHub also renders the plots without running anything.
 
-```bash
-python algorithms/01_linear_regression/test_model.py
-python algorithms/01_linear_regression/demo.py
-```
+Optional extras used for comparisons in a couple of notebooks: `xgboost` (24) and `hmmlearn` (42). They are skipped automatically if not installed.

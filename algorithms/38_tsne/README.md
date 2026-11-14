@@ -1,5 +1,7 @@
 # t-SNE
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 A non-linear way to **look at** high-dimensional data in 2-D. PCA (`34_pca`) preserves large-scale variance and flattens curved structure; t-SNE preserves **who is near whom**, so clusters (like the ten digit classes) separate cleanly.
 
 ## How it works
@@ -23,16 +25,9 @@ The test checks the gradient against finite differences and that the binary sear
 ## Usage
 
 ```python
-from model import TSNE
+# (the class lives in notebook.ipynb)
 
 tsne = TSNE(perplexity=30, n_iter=1000, random_state=0)
 Y = tsne.fit_transform(X)      # n x 2
 tsne.kl_divergence_            # final objective, lower is better
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py      # ~15 s: includes scikit-learn's slow exact t-SNE for comparison
 ```

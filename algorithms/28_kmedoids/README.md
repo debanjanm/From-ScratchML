@@ -1,5 +1,7 @@
 # K-Medoids
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 K-Means (`27_kmeans`) with one change: a cluster is represented by a **medoid** — an actual data point, the member with the smallest total distance to all the others — instead of a mean.
 
 | | K-Means | K-Medoids |
@@ -16,17 +18,10 @@ This is the Voronoi-iteration variant, which is simpler and faster than the clas
 ## Usage
 
 ```python
-from model import KMedoids
+# (the class lives in notebook.ipynb)
 
 model = KMedoids(n_clusters=3, metric="manhattan").fit(X)
 model.labels_            # cluster of each training point
 model.cluster_centers_   # the medoids (rows of X)
 model.predict(X_new)
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

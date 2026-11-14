@@ -1,5 +1,7 @@
 # Elastic Net
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Ridge and Lasso combined. The penalty is a blend controlled by `l1_ratio`:
 
 ```
@@ -15,15 +17,8 @@ Same coordinate-descent solver as Lasso; the only change is the L2 term added to
 ## Usage
 
 ```python
-from model import ElasticNet
+# (the class lives in notebook.ipynb)
 
 model = ElasticNet(alpha=1.0, l1_ratio=0.5).fit(X_train, y_train)
 preds = model.predict(X_test)
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```

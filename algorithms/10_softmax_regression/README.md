@@ -1,5 +1,7 @@
 # Softmax Regression
 
+> **Notebook:** [`notebook.ipynb`](notebook.ipynb) has the explanation, the implementation, visualizations, a scikit-learn check and the tests, all in one place.
+
 Logistic regression (`09_logistic_regression`) generalized to **any number of classes**. Instead of one sigmoid, compute a score per class and normalize with softmax:
 
 ```
@@ -15,16 +17,9 @@ Softmax subtracts the row maximum before `exp` so large scores can't overflow. S
 ## Usage
 
 ```python
-from model import SoftmaxRegression
+# (the class lives in notebook.ipynb)
 
 model = SoftmaxRegression(lr=0.1, n_iters=1000).fit(X_train, y_train)
 preds = model.predict(X_test)
 probs = model.predict_proba(X_test)    # one column per class
-```
-
-## Run
-
-```bash
-python test_model.py
-python demo.py
 ```
